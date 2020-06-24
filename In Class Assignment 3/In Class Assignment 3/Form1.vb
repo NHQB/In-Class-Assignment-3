@@ -15,7 +15,7 @@ Public Class Form1
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub btnNoRight_Click(sender As Object, e As EventArgs) Handles btnNoRight.Click
+    Private Sub btnNoRight_Click(sender As Object, e As EventArgs) Handles btnNoRight.MouseEnter
         btnNoRight.Visible = False
         btnNoLeft.Visible = True
     End Sub
@@ -25,8 +25,16 @@ Public Class Form1
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub btnNoLeft_Click(sender As Object, e As EventArgs) Handles btnNoLeft.Click
+    Private Sub btnNoLeft_Click(sender As Object, e As EventArgs) Handles btnNoLeft.MouseEnter
         btnNoLeft.Visible = False
         btnNoRight.Visible = True
+    End Sub
+
+    Private Sub btnNoRight_Click_1(sender As Object, e As EventArgs) Handles btnNoRight.Click
+        MsgBox("You chose the wrong one, Click ok to choose again")
+    End Sub
+
+    Private Sub btnNoLeft_Click_1(sender As Object, e As EventArgs) Handles btnNoLeft.Click
+        MsgBox("You chose the wrong one, Click ok to choose again")
     End Sub
 End Class
